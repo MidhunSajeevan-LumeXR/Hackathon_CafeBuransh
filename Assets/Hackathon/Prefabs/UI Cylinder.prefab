@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41bad9aebb942ca4b809bc97e711df55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _radius: 1.5
+  _radius: 1
 --- !u!114 &5138363646143813381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,13 +92,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2933851339435530733}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8917090898891810912}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &5760355830478428601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -615,6 +615,7 @@ GameObject:
   - component: {fileID: 7954474584744841089}
   - component: {fileID: 8924795292739406523}
   - component: {fileID: 945251588522121642}
+  - component: {fileID: 6815125200523486966}
   m_Layer: 0
   m_Name: Curved Panel
   m_TagString: Untagged
@@ -630,7 +631,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7071178943354284015}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -639,7 +640,7 @@ Transform:
   - {fileID: 3622055336598802982}
   - {fileID: 7055269968692858625}
   m_Father: {fileID: 3365229854890659003}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &7954474584744841089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -693,6 +694,18 @@ MonoBehaviour:
   _addNewPointsToFront: 0
   _forwardElement: {fileID: 8924795292739406523}
   _canvasMesh: {fileID: 5760355830478428601}
+--- !u!114 &6815125200523486966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7071178943354284015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ebee5a0f23eaf4e80da2ddecd4425b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7472972045680087140
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,7 +739,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7472972045680087140}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.002, y: 0.002, z: 0.002}
   m_ConstrainProportionsScale: 0

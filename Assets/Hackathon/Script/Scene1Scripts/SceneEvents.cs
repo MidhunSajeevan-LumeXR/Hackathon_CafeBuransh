@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class SceneOneEvents : MonoBehaviour
+public class SceneEvents : MonoBehaviour
 {
-    public static SceneOneEvents instance;
+    public static SceneEvents instance;
 
     public UnityEvent StartEvent;
     public UnityEvent EndEvent;

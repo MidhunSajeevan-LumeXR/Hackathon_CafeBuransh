@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.VFX;
 
@@ -47,11 +46,13 @@ public class OnSnapOccured : MonoBehaviour
         flowerParticles.Play();
         audioSource.Play();
 
-        yield return new WaitForSeconds(2f);
+        //Fade in Tittle 
+        yield return new WaitForSeconds(fadeDuration / 2);
         animator.SetBool("ShowTittle", true);
 
-        yield return new WaitForSeconds(5f);
-        SceneOneEvents.instance.EndEvent?.Invoke();
+        //Invoke EndEvents before scene change for fade out all objects
+        yield return new WaitForSeconds(fadeDuration * 2);
+        SceneEvents.instance.EndEvent?.Invoke();
     }
 
     public void EndEvents()
@@ -88,6 +89,10 @@ public class OnSnapOccured : MonoBehaviour
         // Ensure the alpha is exactly zero at the end
         renderer.color = new Color(spriteColor.r, spriteColor.g, spriteColor.b, 0f);
 
+        //Fade out Tittle 
+        animator.SetBool("ShowTittle", false);
+        //Wait for seceonds for completing fadeout
+        yield return new WaitForSeconds(fadeDuration);
         //After all events call next scene 
         GameManager.instance.LoadNextScene();
     }
