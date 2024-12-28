@@ -9,13 +9,12 @@ public class OrbTouch : MonoBehaviour
     public UnityEvent OnTriggerEntered;
     public TextMeshProUGUI text;
 
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter()
     {
         controllerOrb.transform.position = this.transform.position;
         controllerOrb.SetActive(true);
-        text.text = other.name.ToString();
-        Debug.Log("Trigger Entered");
         OnTriggerEntered?.Invoke();
         UIEventManager.instance.SetData(orbContent);
+        this.gameObject.SetActive(false);
     }
 }

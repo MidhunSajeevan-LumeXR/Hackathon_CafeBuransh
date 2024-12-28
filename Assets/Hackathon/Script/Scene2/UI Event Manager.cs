@@ -7,10 +7,11 @@ public class UIEventManager : MonoBehaviour
     public static UIEventManager instance;
 
     [SerializeField] private VideoPlayer videoPlayer;
+    [SerializeField] private GameObject PhotoPannel;
 
-    public UnityEvent OrbSelected;
+    private bool PhotoPreview = false;
 
-    private void Start()
+    private void Awake()
     {
         if (instance == null)
         {
@@ -22,11 +23,24 @@ public class UIEventManager : MonoBehaviour
         }
     }
 
+    public void Update()
+    {
+
+    }
+
     public void SetData(OrbContents orbContents)
     {
-        OrbSelected?.Invoke();
-        Debug.Log("Data writed");
         videoPlayer.clip = orbContents.videoClip;
         videoPlayer.Play();
+        videoPlayer.loopPointReached += EndReached;
+
+    }
+
+    void EndReached(UnityEngine.Video.VideoPlayer vp)
+    {
+        PhotoPreview = true;
+        vp.playbackSpeed = vp.playbackSpeed / 10.0F;
+        PhotoPannel.SetActive(true);
+        videoPlayer.gameObject.GetComponent<Animator>().SetBool("PanoramaPannel", false);
     }
 }
