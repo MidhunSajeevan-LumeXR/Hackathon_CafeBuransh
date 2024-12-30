@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.Video;
 
 public class UIEventManager : MonoBehaviour
@@ -36,7 +35,7 @@ public class UIEventManager : MonoBehaviour
 
     }
 
-    void EndReached(UnityEngine.Video.VideoPlayer vp)
+    void EndReached(VideoPlayer vp)
     {
         PhotoPreview = true;
         vp.playbackSpeed = vp.playbackSpeed / 10.0F;
