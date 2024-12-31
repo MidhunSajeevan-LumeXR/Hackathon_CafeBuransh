@@ -7,8 +7,14 @@ public class SceneEvents : MonoBehaviour
 
     public UnityEvent StartEvent;
     public UnityEvent EndEvent;
+
+    //Scene one Starting events
+
+    public UnityAction StartEvents;
+    public UnityAction EndEvents;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if (instance == null)
         {
@@ -20,12 +26,24 @@ public class SceneEvents : MonoBehaviour
         }
     }
 
+    // Method for invoking the Start events
     public void InvokeStartEvent()
     {
+        // Safely invoke the StartEvent action if it has subscribers
         StartEvent?.Invoke();
+
+        // Safely invoke the StartEvents action if it has subscribers
+        StartEvents?.Invoke();
     }
+
+    // Method for invoking the End events
     public void InvokeEndEvent()
     {
+        // Safely invoke the EndEvent action if it has subscribers
         EndEvent?.Invoke();
+
+        // Safely invoke the EndEvents action if it has subscribers
+        EndEvents?.Invoke();
     }
+
 }

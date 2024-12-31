@@ -7,11 +7,33 @@ using UnityEngine.VFX;
 public class OnSnapOccured : MonoBehaviour
 {
     [SerializeField] private VisualEffect flowerParticles;
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] private Animator animator;
+    [SerializeField] private AudioSource windAudioSource;
+    [SerializeField] private Animator textAnimator;
+    [SerializeField] private AudioSource bgmAudioSource;
+    [SerializeField] private AudioSource introAudioSource;
 
     private List<GameObject> childrenList;
     private float fadeDuration = 5f;
+
+    // Subscribe to Unity events when the script is enabled
+    private void OnEnable()
+    {
+        // Subscribe to the StartEvents action in the SceneEvents singleton instance
+        SceneEvents.instance.StartEvents += SnapOccured;
+
+        // Subscribe to the EndEvents action in the SceneEvents singleton instance
+        SceneEvents.instance.EndEvents += EndEvents;
+    }
+
+    // Unsubscribe from Unity events when the script is disabled
+    private void OnDisable()
+    {
+        // Unsubscribe from the StartEvents action in the SceneEvents singleton instance
+        SceneEvents.instance.StartEvents -= SnapOccured;
+
+        // Unsubscribe from the EndEvents action in the SceneEvents singleton instance
+        SceneEvents.instance.EndEvents -= EndEvents;
+    }
 
     private void Start()
     {
@@ -43,16 +65,18 @@ public class OnSnapOccured : MonoBehaviour
             }
             yield return new WaitForSeconds(Random.Range(0.5f, 0.9f)); // Delay of 1 second
         }
-        flowerParticles.Play();
-        audioSource.Play();
+
+        //Call OnStart Method for runtime events like audio and flower particles to play
+        OnStart();
 
         //Fade in Tittle 
         yield return new WaitForSeconds(fadeDuration / 2);
-        animator.SetBool("ShowTittle", true);
+        textAnimator.SetBool("ShowTittle", true);
 
         //Invoke EndEvents before scene change for fade out all objects
         yield return new WaitForSeconds(fadeDuration * 2);
-        SceneEvents.instance.EndEvent?.Invoke();
+
+        SceneEvents.instance.InvokeEndEvent();
     }
 
     public void EndEvents()
@@ -65,7 +89,6 @@ public class OnSnapOccured : MonoBehaviour
                 StartCoroutine(ReduceAlpha(child.GetComponent<SpriteRenderer>()));
             }
         }
-
     }
 
     // Public coroutine function to fade the SpriteRenderer's alpha to zero
@@ -90,10 +113,22 @@ public class OnSnapOccured : MonoBehaviour
         renderer.color = new Color(spriteColor.r, spriteColor.g, spriteColor.b, 0f);
 
         //Fade out Tittle 
-        animator.SetBool("ShowTittle", false);
+        textAnimator.SetBool("ShowTittle", false);
         //Wait for seceonds for completing fadeout
         yield return new WaitForSeconds(fadeDuration);
         //After all events call next scene 
         GameManager.instance.LoadNextScene();
+    }
+
+    private void OnStart()
+    {
+        flowerParticles.Play();
+        windAudioSource.Play();
+        bgmAudioSource.Play();
+        introAudioSource.Play();
+    }
+    private void OnEnd()
+    {
+
     }
 }

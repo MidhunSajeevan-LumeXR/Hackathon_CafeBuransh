@@ -3,7 +3,8 @@ using UnityEngine;
 public class LoadToNextScene : MonoBehaviour
 {
     public static LoadToNextScene instance;
-    void Start()
+
+    void Awake()
     {
         if (instance == null)
         {
