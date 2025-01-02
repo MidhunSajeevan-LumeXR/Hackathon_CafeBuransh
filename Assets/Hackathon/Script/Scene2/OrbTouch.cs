@@ -9,10 +9,15 @@ public class OrbTouch : MonoBehaviour
 
     public void OnTriggerEnter()
     {
-        controllerOrb.transform.position = this.transform.position;
         controllerOrb.SetActive(true);
         OnTriggerEntered?.Invoke();
         UIEventManager.instance.SetData(orbContent);
         this.gameObject.SetActive(false);
+        Invoke("TurnOnControllerOrb", 1f);
+    }
+
+    private void TurnOnControllerOrb()
+    {
+        controllerOrb.transform.position = this.transform.position;
     }
 }
