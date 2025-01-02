@@ -36,7 +36,7 @@ public class UIEventManager : MonoBehaviour
     void EndReached(VideoPlayer vp)
     {
         PhotoPreview = true;
-        vp.playbackSpeed = vp.playbackSpeed / 10.0F;
+        //vp.playbackSpeed = vp.playbackSpeed / 10.0F;
         PhotoPannel.SetActive(true);
         videoPlayer.gameObject.GetComponent<Animator>().SetBool("PanoramaPannel", false);
     }

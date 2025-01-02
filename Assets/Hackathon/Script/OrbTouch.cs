@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,7 +6,6 @@ public class OrbTouch : MonoBehaviour
     [SerializeField] private OrbContents orbContent;
     [SerializeField] private GameObject controllerOrb;
     public UnityEvent OnTriggerEntered;
-    public TextMeshProUGUI text;
 
     public void OnTriggerEnter()
     {
