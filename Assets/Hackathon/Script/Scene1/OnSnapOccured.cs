@@ -56,7 +56,7 @@ public class OnSnapOccured : MonoBehaviour
     private IEnumerator rotateDelay()
     {
         // Iterate through the list in reverse order with a delay
-        for (int i = childrenList.Count - 1; i >= 0; i--)
+        for (int i = 0; i < childrenList.Count; i++)
         {
             var objectRotator = childrenList[i].GetComponent<ObjectRotator>();
             if (objectRotator != null)

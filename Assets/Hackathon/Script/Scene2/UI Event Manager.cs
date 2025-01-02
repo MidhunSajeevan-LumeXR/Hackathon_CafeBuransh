@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.Video;
 
@@ -7,6 +8,7 @@ public class UIEventManager : MonoBehaviour
 
     [SerializeField] private VideoPlayer videoPlayer;
     [SerializeField] private GameObject PhotoPannel;
+    [SerializeField] private TextMeshProUGUI descriptionText;
 
     private bool PhotoPreview = false;
 
@@ -22,13 +24,9 @@ public class UIEventManager : MonoBehaviour
         }
     }
 
-    public void Update()
-    {
-
-    }
-
     public void SetData(OrbContents orbContents)
     {
+        descriptionText.text = orbContents.Data;
         videoPlayer.clip = orbContents.videoClip;
         videoPlayer.Play();
         videoPlayer.loopPointReached += EndReached;

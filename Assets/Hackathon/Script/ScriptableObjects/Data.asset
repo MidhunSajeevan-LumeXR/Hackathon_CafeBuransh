@@ -15,4 +15,12 @@ MonoBehaviour:
   orbName: Deoria Tal
   videoClip: {fileID: 32900000, guid: 2ebc1af17604f7a40a714e57dac13a10, type: 3}
   orbStatus: 0
-  data: "dfsfsdfsdf   d\nfsdfsdf\n\ndfsdf\nsdfsdf \nsdfsdf\n df\nd\nfsdf\nsdf\nsdf\nsd\nf\nsdf\ns\ndf\nsd\nfsdfsdf"
+  data: 'Deoria Tal
+
+    A serene high-altitude lake known for its tranquility and
+    stunning reflections of snow-clad peaks.
+
+    Distance from Cafe Buransh: 3 km
+    trek starting from Sari Village.
+
+    Altitude: 7,999 ft.'
