@@ -45,6 +45,7 @@ public class LineAnimation : MonoBehaviour
 
     public void StartRedrawingLine()
     {
+        animationDuration = 1.5f;
         InitializeLinePoints();
         // Activate the child GameObjects after animation completes
         foreach (var orb in orbs)

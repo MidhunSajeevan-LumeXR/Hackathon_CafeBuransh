@@ -13,6 +13,9 @@ public class SceneEvents : MonoBehaviour
     public UnityAction StartEvents;
     public UnityAction EndEvents;
 
+    //Scene orb touch events
+    public UnityAction OrbTriggered;
+
     // Start is called before the first frame update
     void Awake()
     {
