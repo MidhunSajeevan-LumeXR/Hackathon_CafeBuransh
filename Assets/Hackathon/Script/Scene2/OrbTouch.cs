@@ -4,20 +4,15 @@ using UnityEngine.Events;
 public class OrbTouch : MonoBehaviour
 {
     [SerializeField] private OrbContents orbContent;
-    [SerializeField] private GameObject controllerOrb;
-    public UnityEvent OnTriggerEntered;
 
     public void OnTriggerEnter()
     {
-        controllerOrb.SetActive(true);
-        OnTriggerEntered?.Invoke();
+        //Invoke all events when trigger entered
+        SceneEvents.instance.OrbTriggered?.Invoke();
+        //Set data to UI Event Manager
         UIEventManager.instance.SetData(orbContent);
+        //Set Active false this GameObject
         this.gameObject.SetActive(false);
-        Invoke("TurnOnControllerOrb", 1f);
     }
 
-    private void TurnOnControllerOrb()
-    {
-        controllerOrb.transform.position = this.transform.position;
-    }
 }

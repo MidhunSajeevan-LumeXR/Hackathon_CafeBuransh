@@ -31,11 +31,17 @@ public class UIEventManager : MonoBehaviour
     //Method is called when the orb is triggered
     public void SetData(OrbContents orbContents)
     {
+        //Add Hading text 
         headingText.text = orbContents.Heading;
+        //Add Description 
         descriptionText.text = orbContents.Data;
+        //Set video Clip
         videoPlayer.clip = orbContents.videoClip;
+        //Play video clip
         videoPlayer.Play();
+        //Subcribe to loop Point reached for check video stoped
         videoPlayer.loopPointReached += EndReached;
+        //Wait for seconds before set active and inactive the gameobject
         StartCoroutine(TurnOnOrOffObject(headingText.gameObject, false));
 
         for (int i = 0; i < photoSliders.Length; i++)
@@ -46,8 +52,9 @@ public class UIEventManager : MonoBehaviour
 
     void EndReached(VideoPlayer vp)
     {
+        //Set Active false if video completed
         videoPlayer.gameObject.GetComponent<Animator>().SetBool("PanoramaPannel", false);
-        //vp.playbackSpeed = vp.playbackSpeed / 10.0F;
+        //Set Active true for Projector view
         StartCoroutine(TurnOnOrOffObject(PhotoPannel, true));
     }
 

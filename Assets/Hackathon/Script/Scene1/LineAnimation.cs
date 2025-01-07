@@ -47,7 +47,7 @@ public class LineAnimation : MonoBehaviour
     {
         animationDuration = 1.5f;
         InitializeLinePoints();
-        // Activate the child GameObjects after animation completes
+        // Activate the child GameObjects after animation complete
         foreach (var orb in orbs)
         {
             if (orb != null)
@@ -111,7 +111,7 @@ public class LineAnimation : MonoBehaviour
             }
         }
 
-        // Activate the child GameObjects after animation completes
+        // Activate the child GameObjects after animation Complete
         foreach (var orb in orbs)
         {
             if (orb != null)

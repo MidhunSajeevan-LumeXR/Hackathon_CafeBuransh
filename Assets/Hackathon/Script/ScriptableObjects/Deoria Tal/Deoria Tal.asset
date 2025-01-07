@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d9889bc5f8aa3445803712c3ea08d17, type: 3}
+  m_Name: Deoria Tal
+  m_EditorClassIdentifier: 
+  orbName: Deoria Tal
+  videoClip: {fileID: 32900000, guid: 2ebc1af17604f7a40a714e57dac13a10, type: 3}
+  PhotoClips:
+  - {fileID: 11400000, guid: 2bddb7fad7973204f9b2b0fd674c4fec, type: 2}
+  - {fileID: 11400000, guid: 3c33cd1045fdfe64cbdb35bfc5f68431, type: 2}
+  - {fileID: 11400000, guid: 17650633607d4fe4e84ffea93ab9d444, type: 2}
+  Heading: 'Deoria Tal
+
+    Altitude: 7,999 ft.'
+  data: 'Deoria Tal
+
+    A serene high-altitude lake known for its tranquility and
+    stunning reflections of snow-clad peaks.
+
+    Distance from Cafe Buransh: 3 km
+    trek starting from Sari Village.
+
+    Altitude: 7,999 ft.'
