@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class AnimationContoller : MonoBehaviour
@@ -7,7 +8,7 @@ public class AnimationContoller : MonoBehaviour
 
     private Animator animator;
     private LineAnimationController lineAnimationController;
-
+    private bool panoramicPannelStatus = false;
 
     private void Start()
     {
@@ -21,15 +22,24 @@ public class AnimationContoller : MonoBehaviour
         SceneEvents.instance.InvokeStartEvent();
     }
 
+    public void OnTerrainAnimationComplete()
+    {
+        if (panoramicPannelStatus)
+        {
+            panoramicPannel.SetActive(true);
+        }
+    }
+
     public void OnOrbTriggered()
     {
-        //Start Redraw Line
-        lineAnimationController.StartLineRedraw();
         //Dissolve the map
         animator.SetBool("MapDissolve", true);
+        //Start Redraw Line
+        lineAnimationController.StartLineRedraw();
         //Set Active panoramic pannel 
-        panoramicPannel.SetActive(true);
+        panoramicPannelStatus = true;
         //Set Active controller orb
         ControllerOrb.SetActive(true);
     }
+
 }
