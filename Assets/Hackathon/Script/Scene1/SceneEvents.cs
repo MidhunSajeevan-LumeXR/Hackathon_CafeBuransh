@@ -8,13 +8,17 @@ public class SceneEvents : MonoBehaviour
     public UnityEvent StartEvent;
     public UnityEvent EndEvent;
 
-    //Scene one Starting events
+    //Scene one Starting Events
 
     public UnityAction StartEvents;
     public UnityAction EndEvents;
 
-    //Scene orb touch events
+    //Scene orb touch Events
     public UnityAction OrbTriggered;
+
+    //Scene Audio Events
+    public UnityAction ButtonClick;
+    public UnityAction OrbAudioTrigger;
 
     // Start is called before the first frame update
     void Awake()
@@ -49,4 +53,9 @@ public class SceneEvents : MonoBehaviour
         EndEvents?.Invoke();
     }
 
+    public void InvokeButtonClick()
+    {
+        // Safely invoke the Button action if it has subscribers
+        ButtonClick?.Invoke();
+    }
 }

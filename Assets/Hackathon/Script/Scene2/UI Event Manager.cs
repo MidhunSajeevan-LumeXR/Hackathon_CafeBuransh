@@ -35,17 +35,12 @@ public class UIEventManager : MonoBehaviour
         descriptionText.text = orbContents.Data;
         //Set video Clip
         videoPlayer.clip = orbContents.videoClip;
-        //Play video clip
-        // videoPlayer.Prepare();
-        // if (videoPlayer.isPrepared)
-        // {
-
-        //     videoPlayer.Play();
-        // }
         //Add Hading text 
         tittleText.text = orbContents.Heading;
+
         //Subcribe to loop Point reached for check video stoped
-        videoPlayer.loopPointReached += EndReached;
+        //     videoPlayer.loopPointReached += EndReached;
+
         //Wait for seconds before set active and inactive the gameobject
         StartCoroutine(TurnOnOrOffObject(tittleText.gameObject, false));
 

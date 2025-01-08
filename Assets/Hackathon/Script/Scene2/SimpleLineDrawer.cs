@@ -28,9 +28,6 @@ public class SimpleLineDrawer : MonoBehaviour
 
     public void DrawLinesBackward()
     {
-        //Turn of the orb first before line animation
-        OrbController(false);
-
         //Reduce time when draw line backward
         animationDuration = animationDuration / 5;
         foreach (LineRenderer lineRenderer in lineRenderers)
@@ -78,15 +75,10 @@ public class SimpleLineDrawer : MonoBehaviour
             }
 
             lineRenderer.SetPosition(i + 1, endPosition);
-        }
-        OrbController(forward);
-    }
-
-    private void OrbController(bool state)
-    {
-        foreach (var child in lineRenderers)
-        {
-            child.transform.GetChild(0).gameObject.SetActive(state);
+            if (forward)
+            {
+                lineRenderers[i].transform.GetChild(0).gameObject.SetActive(forward);
+            }
         }
     }
 }

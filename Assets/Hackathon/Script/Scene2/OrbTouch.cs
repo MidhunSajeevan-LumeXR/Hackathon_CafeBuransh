@@ -6,12 +6,18 @@ public class OrbTouch : MonoBehaviour
 
     public void OnTriggerEnter()
     {
+        //Invoke Audio events 
+        SceneEvents.instance.OrbAudioTrigger?.Invoke();
         //Invoke all events when trigger entered
         SceneEvents.instance.OrbTriggered?.Invoke();
         //Set data to UI Event Manager
         UIEventManager.instance.SetData(orbContent);
-        //Set Active false this GameObject
-        this.gameObject.SetActive(false);
+
+        GetComponent<ScriptAnimation>().AnimateScale();
     }
 
+    private void OnTriggerExit()
+    {
+        GetComponent<ScriptAnimation>().ResetScale();
+    }
 }
