@@ -75,10 +75,12 @@ public class SimpleLineDrawer : MonoBehaviour
             }
 
             lineRenderer.SetPosition(i + 1, endPosition);
-            if (forward)
-            {
-                lineRenderers[i].transform.GetChild(0).gameObject.SetActive(forward);
-            }
+        }
+
+        for (int i = 0; i < lineRenderers.Length; i++)
+        {
+            Debug.Log(lineRenderers[i].name);
+            lineRenderers[i].transform.GetChild(0).gameObject.SetActive(forward);
         }
     }
 }

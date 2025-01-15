@@ -5,7 +5,7 @@ public class ObjectRotator : MonoBehaviour
 {
     [SerializeField] private float rotationSpeed = 2f; // Duration for one full rotation
     [SerializeField] private bool rotateClockwise = true; // Direction of rotation
-
+    [SerializeField] private Ease easeState;
     void Start()
     {
         // Determine the rotation direction
@@ -17,7 +17,7 @@ public class ObjectRotator : MonoBehaviour
         .OnComplete(() => transform.DOLocalRotate(new Vector3(0, 0, rotationAngle), rotationSpeed, RotateMode.FastBeyond360)
         .SetRelative()
         .SetLoops(-1, LoopType.Restart)
-        .SetEase(Ease.Linear));
+        .SetEase(easeState));
 
     }
 }

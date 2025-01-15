@@ -4,7 +4,7 @@ using UnityEngine;
 public class AnimationContoller : MonoBehaviour
 {
     [SerializeField] GameObject panoramicPannel;
-    [SerializeField] GameObject ControllerOrb;
+    [SerializeField] GameObject ControllerOrbPannel;
 
     private Animator animator;
     private LineAnimationController lineAnimationController;
@@ -39,7 +39,13 @@ public class AnimationContoller : MonoBehaviour
         //Set Active panoramic pannel 
         panoramicPannelStatus = true;
         //Set Active controller orb
-        ControllerOrb.SetActive(true);
+        StartCoroutine(SetActiveControllPannel());
+    }
+
+    public IEnumerator SetActiveControllPannel()
+    {
+        yield return new WaitForSeconds(1f);
+        ControllerOrbPannel.SetActive(true);
     }
 
 }

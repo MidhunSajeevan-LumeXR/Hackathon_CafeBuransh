@@ -17,8 +17,8 @@ public class SceneEvents : MonoBehaviour
     public UnityAction OrbTriggered;
 
     //Scene Audio Events
-    public UnityAction ButtonClick;
-    public UnityAction OrbAudioTrigger;
+    public UnityAction ButtonClickAudio;
+    public UnityAction OrbTriggerAudio;
 
     // Start is called before the first frame update
     void Awake()
@@ -56,6 +56,6 @@ public class SceneEvents : MonoBehaviour
     public void InvokeButtonClick()
     {
         // Safely invoke the Button action if it has subscribers
-        ButtonClick?.Invoke();
+        ButtonClickAudio?.Invoke();
     }
 }

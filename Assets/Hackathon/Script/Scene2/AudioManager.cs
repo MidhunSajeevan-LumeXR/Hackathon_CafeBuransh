@@ -10,8 +10,8 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        SceneEvents.instance.OrbAudioTrigger += OrbTriggered;
-        SceneEvents.instance.ButtonClick += ButtonClick;
+        SceneEvents.instance.OrbTriggerAudio += OrbTriggered;
+        SceneEvents.instance.ButtonClickAudio += ButtonClick;
     }
 
     private void OrbTriggered()
