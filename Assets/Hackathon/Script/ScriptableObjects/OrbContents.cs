@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
@@ -10,8 +11,8 @@ public class OrbContents : ScriptableObject
     public VideoClip videoClip;
     public Photo[] PhotoClips;
 
-    [SerializeField, TextArea(3, 10)]
     public string Heading;
+    public string Altitude;
 
     [Header("Additional Data")]
     [SerializeField, TextArea(3, 50)]

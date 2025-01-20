@@ -20,6 +20,9 @@ public class SceneEvents : MonoBehaviour
     public UnityAction ButtonClickAudio;
     public UnityAction OrbTriggerAudio;
 
+    //To interact with one orb at a time
+    public bool OneOrbTriggered = false;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -31,6 +34,7 @@ public class SceneEvents : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
     }
 
     // Method for invoking the Start events
@@ -58,4 +62,5 @@ public class SceneEvents : MonoBehaviour
         // Safely invoke the Button action if it has subscribers
         ButtonClickAudio?.Invoke();
     }
+
 }

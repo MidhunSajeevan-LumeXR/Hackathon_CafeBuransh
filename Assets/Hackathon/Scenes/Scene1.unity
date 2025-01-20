@@ -3060,7 +3060,7 @@ Transform:
   m_GameObject: {fileID: 272147050}
   serializedVersion: 2
   m_LocalRotation: {x: 0.15126105, y: -0, z: -0, w: -0.98849386}
-  m_LocalPosition: {x: 0.246, y: 1.678, z: 0.423}
+  m_LocalPosition: {x: 0.246, y: 1.583, z: 0.423}
   m_LocalScale: {x: 0.03239476, y: 0.03239476, z: 0.03239476}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5963,10 +5963,10 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: 0, y: 1.6420001, z: 0.6279}
+      - m_Value: {x: 0, y: 1.547, z: 0.6279}
         m_Name: Pedestal Point
         m_Overridden: 1
-      - m_Value: {x: 0.246, y: 1.678, z: 0.423}
+      - m_Value: {x: 0.246, y: 1.583, z: 0.423}
         m_Name: Aligner Position
         m_Overridden: 1
     m_Vector4f:
@@ -17206,7 +17206,7 @@ Transform:
   m_GameObject: {fileID: 1445520494}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.6420001, z: 0.65}
+  m_LocalPosition: {x: 0, y: 1.547, z: 0.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20535,7 +20535,7 @@ VisualEffect:
   m_Enabled: 1
   m_Asset: {fileID: 8926484042661614526, guid: c53ea50c1e5e89245aacfc03ddd98643, type: 3}
   m_InitialEventName: OnPlay
-  m_InitialEventNameOverriden: 0
+  m_InitialEventNameOverriden: 1
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
   m_AllowInstancing: 1

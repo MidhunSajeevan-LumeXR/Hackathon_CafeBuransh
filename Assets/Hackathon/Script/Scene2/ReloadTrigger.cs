@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class ReloadTrigger : MonoBehaviour
@@ -11,12 +12,12 @@ public class ReloadTrigger : MonoBehaviour
         scriptAnimation = GetComponent<ScriptAnimation>();
     }
 
-    private void OnTriggerEnter()
+    private void OnTriggerEnter(Collider other)
     {
-        if (!isTriggerd)
+        if (!isTriggerd && other.transform.root.CompareTag("Player"))
         {
             scriptAnimation.AnimateScale();
-            SceneEvents.instance.OrbTriggerAudio?.Invoke();
+            AudioManager.instance.HomeTriggered();
             StartCoroutine(ReloadScene());
             isTriggerd = true;
         }

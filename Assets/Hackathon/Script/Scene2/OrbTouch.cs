@@ -7,21 +7,47 @@ public class OrbTouch : MonoBehaviour
 
     private bool isTriggerd = false;
 
-    public void OnTriggerEnter()
+    private void Start()
     {
-        if (!isTriggerd)
+        GetComponentInChildren<ScriptAnimation>().AnimateRotation();
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        // if (!isTriggerd && other.transform.root.CompareTag("Player") && !SceneEvents.instance.OneOrbTriggered)
+        // {
+        //     SceneEvents.instance.OneOrbTriggered = true;
+        //     GetComponentInChildren<ShaderGraphAlphaController>().FadeIn();
+        //     GetComponent<ScriptAnimation>().AnimateBounce();
+        //     StartCoroutine(AnimateLocationPin());
+        //     //Invoke Audio events 
+        //     SceneEvents.instance.OrbTriggerAudio?.Invoke();
+
+        //     isTriggerd = true;
+        // }
+        //Replace below code with above orginal code
+        if (!isTriggerd && !SceneEvents.instance.OneOrbTriggered)
         {
+            SceneEvents.instance.OneOrbTriggered = true;
+            GetComponentInChildren<ShaderGraphAlphaController>().FadeIn();
+            GetComponent<ScriptAnimation>().AnimateBounce();
+            StartCoroutine(AnimateLocationPin());
             //Invoke Audio events 
             SceneEvents.instance.OrbTriggerAudio?.Invoke();
-            //Invoke all events when trigger entered
-            SceneEvents.instance.OrbTriggered?.Invoke();
-            //Set data to UI Event Manager
-            UIEventManager.instance.SetData(orbContent);
-            GetComponent<ScriptAnimation>().AnimateScale();
-            GetComponent<ShaderGraphAlphaController>().FadeIn();
-            StartCoroutine(TurnOffObject());
+
             isTriggerd = true;
         }
+    }
+
+    private IEnumerator AnimateLocationPin()
+    {
+        yield return new WaitForSeconds(1f);
+        //Invoke all events when trigger entered
+        SceneEvents.instance.OrbTriggered?.Invoke();
+        //Set data to UI Event Manager
+        UIEventManager.instance.SetData(orbContent);
+
+        StartCoroutine(TurnOffObject());
     }
 
     private IEnumerator TurnOffObject()

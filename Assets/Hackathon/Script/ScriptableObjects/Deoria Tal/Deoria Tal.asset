@@ -18,9 +18,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2bddb7fad7973204f9b2b0fd674c4fec, type: 2}
   - {fileID: 11400000, guid: 3c33cd1045fdfe64cbdb35bfc5f68431, type: 2}
   - {fileID: 11400000, guid: 17650633607d4fe4e84ffea93ab9d444, type: 2}
-  Heading: 'Deoria Tal
-
-    Altitude: 7,999 ft.'
+  Heading: Deoria Tal
+  Altitude: 'Altitude: 7,999 ft'
   data: 'Deoria Tal
 
     A serene high-altitude lake known for its tranquility and

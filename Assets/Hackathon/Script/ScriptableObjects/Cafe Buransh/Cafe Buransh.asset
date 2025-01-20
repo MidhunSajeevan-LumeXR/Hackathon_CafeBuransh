@@ -13,14 +13,13 @@ MonoBehaviour:
   m_Name: Cafe Buransh
   m_EditorClassIdentifier: 
   orbName: Cafe Buransh
-  videoClip: {fileID: 32900000, guid: 5eeffd67b65c564458dbd6dafedfa8c2, type: 3}
+  videoClip: {fileID: 32900000, guid: 2ebc1af17604f7a40a714e57dac13a10, type: 3}
   PhotoClips:
-  - {fileID: 11400000, guid: 878294d1ca5d7ab449bd11d513a43856, type: 2}
   - {fileID: 11400000, guid: 05bee40f358d92b47a0e599cafde36e5, type: 2}
   - {fileID: 11400000, guid: 286c163dc80507847acdf9aa8f6a840f, type: 2}
-  Heading: 'Cafe Buransh
-
-    Altitude: 7,999 ft.'
+  - {fileID: 11400000, guid: 878294d1ca5d7ab449bd11d513a43856, type: 2}
+  Heading: Cafe Buransh
+  Altitude: 'Altitude: 7,999 ft'
   data: 'Cafe Buransh
 
     A serene high-altitude lake known for its tranquility
