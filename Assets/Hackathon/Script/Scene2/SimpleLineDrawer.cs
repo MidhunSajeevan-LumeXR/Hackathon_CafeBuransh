@@ -79,7 +79,6 @@ public class SimpleLineDrawer : MonoBehaviour
 
         for (int i = 0; i < lineRenderers.Length; i++)
         {
-            Debug.Log(lineRenderers[i].name);
             lineRenderers[i].transform.GetChild(0).gameObject.SetActive(forward);
         }
     }

@@ -14,19 +14,7 @@ public class OrbTouch : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        // if (!isTriggerd && other.transform.root.CompareTag("Player") && !SceneEvents.instance.OneOrbTriggered)
-        // {
-        //     SceneEvents.instance.OneOrbTriggered = true;
-        //     GetComponentInChildren<ShaderGraphAlphaController>().FadeIn();
-        //     GetComponent<ScriptAnimation>().AnimateBounce();
-        //     StartCoroutine(AnimateLocationPin());
-        //     //Invoke Audio events 
-        //     SceneEvents.instance.OrbTriggerAudio?.Invoke();
-
-        //     isTriggerd = true;
-        // }
-        //Replace below code with above orginal code
-        if (!isTriggerd && !SceneEvents.instance.OneOrbTriggered)
+        if (!isTriggerd && other.transform.root.CompareTag("Player") && !SceneEvents.instance.OneOrbTriggered)
         {
             SceneEvents.instance.OneOrbTriggered = true;
             GetComponentInChildren<ShaderGraphAlphaController>().FadeIn();

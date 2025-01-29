@@ -19,13 +19,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5daae1b6614d932418dbac8f2743e60f, type: 2}
   - {fileID: 11400000, guid: 99b950d9ce3728348a0675d1f6047583, type: 2}
   Heading: Chandrashila
-  Altitude: Demo Altitude
-  data: 'Cafe Buransh
+  Altitude: 'Altitude: 13,000 ft'
+  data: '<b>Chandrashila</b>
 
-    A serene high-altitude lake known for its tranquility
-    and stunning reflections of snow-clad peaks.
+    A breathtaking summit trek offering panoramic views
+    of the Himalayas and a spiritually enriching experience.
 
-    Distance from Cafe Buransh:
-    3 km trek starting from Sari Village.
+    <b>Distance from
+    Cafe Buransh:</b> 9 km trek starting from Chopta.
 
-    Altitude: 7,999 ft.'
+    Altitude: 13,000 ft.'

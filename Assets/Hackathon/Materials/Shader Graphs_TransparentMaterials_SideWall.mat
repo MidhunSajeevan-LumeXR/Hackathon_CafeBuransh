@@ -52,8 +52,10 @@ Material:
     m_Ints: []
     m_Floats:
     - _Alpha: 1
+    - _Metallic: 0
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _Smoothness: 0
     m_Colors:
-    - _Color: {r: 0.21698111, g: 0.20259531, b: 0.1934407, a: 0}
+    - _Color: {r: 0.19999999, g: 0.19339621, b: 0.18679243, a: 0}
   m_BuildTextureStacks: []

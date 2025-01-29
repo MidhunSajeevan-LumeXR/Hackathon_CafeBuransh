@@ -18,14 +18,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2cbdb37e93009be4fac4df1ccb844828, type: 2}
   - {fileID: 11400000, guid: 92b0b5e66c5220f45b6911995628c892, type: 2}
   - {fileID: 11400000, guid: d969917c40b67eb46a9cebb37ffedef7, type: 2}
-  Heading: 'Sari Village '
-  Altitude: 'Altitude: 7,999 ft'
-  data: 'Deoria Tal
+  Heading: Sari Village
+  Altitude: 'Altitude: 6,601 ft'
+  data: '<b>Sari Village</b>
 
-    A serene high-altitude lake known for its tranquility and
-    stunning reflections of snow-clad peaks.
+    A rustic village serving as the base for treks
+    to Deoria Tal and Chandrashila, blending natural beauty with cultural experiences.
 
-    Distance from Cafe Buransh: 3 km
-    trek starting from Sari Village.
+    <b>Distance
+    from Cafe Buransh:</b> 0.5 km by road.
 
-    Altitude: 7,999 ft.'
+    Altitude: 6,601 ft.'

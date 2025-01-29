@@ -19,13 +19,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 286c163dc80507847acdf9aa8f6a840f, type: 2}
   - {fileID: 11400000, guid: 878294d1ca5d7ab449bd11d513a43856, type: 2}
   Heading: Cafe Buransh
-  Altitude: 'Altitude: 7,999 ft'
-  data: 'Cafe Buransh
+  Altitude: 'Altitude: 6,600 ft'
+  data: '<b>Cafe Buransh</b>
 
-    A serene high-altitude lake known for its tranquility
-    and stunning reflections of snow-clad peaks.
+    A cozy mountain retreat offering authentic Pahadi
+    flavors, warm hospitality, and scenic charm.
 
-    Distance from Cafe Buransh:
-    3 km trek starting from Sari Village.
+    <b>Distance from Cafe Buransh:</b>
+    Base point for all activities.
 
-    Altitude: 7,999 ft.'
+    Altitude: 6,600 ft.'

@@ -7,13 +7,13 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        if (instance != null)
+        if (instance == null)
         {
-            Destroy(this.gameObject);
+            instance = this;
         }
         else
         {
-            instance = this;
+            Destroy(this.gameObject);
         }
     }
 

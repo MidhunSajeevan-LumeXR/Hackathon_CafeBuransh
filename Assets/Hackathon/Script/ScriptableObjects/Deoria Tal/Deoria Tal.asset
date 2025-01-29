@@ -20,12 +20,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 17650633607d4fe4e84ffea93ab9d444, type: 2}
   Heading: Deoria Tal
   Altitude: 'Altitude: 7,999 ft'
-  data: 'Deoria Tal
+  data: '<b>Deoria Tal</b>
 
-    A serene high-altitude lake known for its tranquility and
-    stunning reflections of snow-clad peaks.
+    A serene high-altitude lake known for its tranquility
+    and stunning reflections of snow-clad peaks.
 
-    Distance from Cafe Buransh: 3 km
-    trek starting from Sari Village.
+    <b>Distance from Cafe Buransh:</b>
+    3 km trek starting from Sari Village.
 
     Altitude: 7,999 ft.'
