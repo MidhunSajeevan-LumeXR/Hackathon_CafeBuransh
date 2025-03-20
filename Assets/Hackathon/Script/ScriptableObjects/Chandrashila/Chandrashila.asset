@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Chandrashila
   m_EditorClassIdentifier: 
   orbName: Chandrashila
-  videoClip: {fileID: 32900000, guid: 2ebc1af17604f7a40a714e57dac13a10, type: 3}
+  videoClip: {fileID: 32900000, guid: d17ab1e8f79218342a0011ae3fb3df4c, type: 3}
   PhotoClips:
   - {fileID: 11400000, guid: a0f1efa07a5e98e49a2a8711874a68a7, type: 2}
   - {fileID: 11400000, guid: 5daae1b6614d932418dbac8f2743e60f, type: 2}
   - {fileID: 11400000, guid: 99b950d9ce3728348a0675d1f6047583, type: 2}
+  - {fileID: 11400000, guid: b11625a87d3baa647bf761841c1d3be4, type: 2}
+  - {fileID: 11400000, guid: 05bca1e68e24f38489199a1f07b3af56, type: 2}
+  - {fileID: 11400000, guid: 7a77a1d846123454db4ff754d18f026e, type: 2}
   Heading: Chandrashila
   Altitude: 'Altitude: 13,000 ft'
   data: '<b>Chandrashila</b>

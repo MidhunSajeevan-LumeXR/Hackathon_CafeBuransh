@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Deoria Tal
   m_EditorClassIdentifier: 
   orbName: Deoria Tal
-  videoClip: {fileID: 32900000, guid: 2ebc1af17604f7a40a714e57dac13a10, type: 3}
+  videoClip: {fileID: 32900000, guid: 2a5db5d47b626464ebc06cc6c32430f1, type: 3}
   PhotoClips:
   - {fileID: 11400000, guid: 2bddb7fad7973204f9b2b0fd674c4fec, type: 2}
   - {fileID: 11400000, guid: 3c33cd1045fdfe64cbdb35bfc5f68431, type: 2}
   - {fileID: 11400000, guid: 17650633607d4fe4e84ffea93ab9d444, type: 2}
+  - {fileID: 11400000, guid: 9b1a0b0e633828d448930414690a0b37, type: 2}
+  - {fileID: 11400000, guid: 635877e6795d62c46a4baa2bfdc60622, type: 2}
+  - {fileID: 11400000, guid: 8d4db9777c2a8aa4297bb3df4464159b, type: 2}
   Heading: Deoria Tal
   Altitude: 'Altitude: 7,999 ft'
   data: '<b>Deoria Tal</b>

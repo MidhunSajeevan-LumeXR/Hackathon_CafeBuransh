@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Cafe Buransh
   m_EditorClassIdentifier: 
   orbName: Cafe Buransh
-  videoClip: {fileID: 32900000, guid: 2ebc1af17604f7a40a714e57dac13a10, type: 3}
+  videoClip: {fileID: 32900000, guid: bb6767aa90b5ef54fa016f0375b7b18d, type: 3}
   PhotoClips:
   - {fileID: 11400000, guid: 05bee40f358d92b47a0e599cafde36e5, type: 2}
   - {fileID: 11400000, guid: 286c163dc80507847acdf9aa8f6a840f, type: 2}
   - {fileID: 11400000, guid: 878294d1ca5d7ab449bd11d513a43856, type: 2}
+  - {fileID: 11400000, guid: 1d7d75affe5989e4bb12cf043cbaf146, type: 2}
+  - {fileID: 11400000, guid: b2d461e2c6bbd4d4b995c089efed65ce, type: 2}
+  - {fileID: 11400000, guid: 8c8328c530358f54c9846c518486550f, type: 2}
   Heading: Cafe Buransh
   Altitude: 'Altitude: 6,600 ft'
   data: '<b>Cafe Buransh</b>

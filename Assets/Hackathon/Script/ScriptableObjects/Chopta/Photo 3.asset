@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Photo 3
   m_EditorClassIdentifier: 
   PhotoName: 
-  Image: {fileID: 2800000, guid: 7ceeb96d9ab713342a9bcda42d5e80bf, type: 3}
+  Image: {fileID: 2800000, guid: 1f56f67446b8bc949884d79cf7f12010, type: 3}
   data: 

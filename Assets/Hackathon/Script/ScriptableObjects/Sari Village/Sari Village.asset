@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Sari Village
   m_EditorClassIdentifier: 
   orbName: Deoria Tal
-  videoClip: {fileID: 32900000, guid: 2ebc1af17604f7a40a714e57dac13a10, type: 3}
+  videoClip: {fileID: 32900000, guid: b7279069b98aacf4bbc99f3339ef278e, type: 3}
   PhotoClips:
   - {fileID: 11400000, guid: 2cbdb37e93009be4fac4df1ccb844828, type: 2}
   - {fileID: 11400000, guid: 92b0b5e66c5220f45b6911995628c892, type: 2}
   - {fileID: 11400000, guid: d969917c40b67eb46a9cebb37ffedef7, type: 2}
+  - {fileID: 11400000, guid: 9cac655472985b445969f0d99cf375b1, type: 2}
+  - {fileID: 11400000, guid: 1fc9b2a88f4e5884294a4a82cab7d0c9, type: 2}
+  - {fileID: 11400000, guid: dd09afc4e0911e644995b8f4fd73f650, type: 2}
   Heading: Sari Village
   Altitude: 'Altitude: 6,601 ft'
   data: '<b>Sari Village</b>
