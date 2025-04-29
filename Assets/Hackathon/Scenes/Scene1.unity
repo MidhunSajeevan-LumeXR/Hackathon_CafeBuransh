@@ -17733,7 +17733,7 @@ GameObject:
   - component: {fileID: 1482596576}
   - component: {fileID: 1482596577}
   m_Layer: 0
-  m_Name: Intro Source
+  m_Name: Intro Voice Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17764,7 +17764,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bc96884b38ef6884ca3b69b8d0c26390, type: 3}
+  m_audioClip: {fileID: 8300000, guid: eac9dc9d41b05a342b83d2594baa11c6, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
